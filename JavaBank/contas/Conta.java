@@ -8,6 +8,7 @@ public class Conta {
         private int agencia;
         private int numero;
         //abaixo ele irá pegar de uma outra classe criada as variaveis definido dentro da classe Cliente
+        //Titular é do tipo Cliente.
         private Cliente titular;
      
 
@@ -59,6 +60,14 @@ public class Conta {
 
         public void setAgencia(int agencia) {
             this.agencia = agencia;
+        }
+
+        public void setTitular(Cliente titular) {
+            this.titular = titular;
+        }
+
+        public Cliente getTitular() {
+            return titular;
         }
 
 }

@@ -7,5 +7,11 @@ public class TesteGettersESetters {
         conta.setNumero(12);
         System.out.println(conta.getNumero());
 
+        Cliente cliente = new Cliente();
+        conta.setTitular(cliente);
+        cliente.setCPF("111.111.111-11");
+
+        System.out.println(conta.getTitular().getCPF());
+  
     }
 }
