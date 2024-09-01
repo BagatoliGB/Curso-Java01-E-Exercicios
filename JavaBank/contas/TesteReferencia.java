@@ -3,20 +3,20 @@ package JavaBank.contas;
 public class TesteReferencia {
     public static void main(String[] args) {
        Conta primeiraConta = new Conta ();
-       primeiraConta.saldo = 300;
+       primeiraConta.deposita(300);
 
-       System.out.println("O saldo da primeira conta é: " + primeiraConta.saldo);
+       System.out.println("O saldo da primeira conta é: " + primeiraConta.getSaldo());
 
       // Conta segundaConta = primeiraConta;
         Conta segundaConta = new Conta();
-        segundaConta.saldo = 300;
+        segundaConta.deposita(300); 
 
-       System.out.println("O saldo da segunda conta é: " + segundaConta.saldo);
+       System.out.println("O saldo da segunda conta é: " + segundaConta.getSaldo());
 
-       segundaConta.saldo += 100;
-       System.out.println("O saldo agora da segunda conta é: " + segundaConta.saldo);
+       segundaConta.deposita(100);
+       System.out.println("O saldo agora da segunda conta é: " + segundaConta.getSaldo());
 
-       System.out.println("O saldo agora da primeira conta é: " + primeiraConta.saldo);
+       System.out.println("O saldo agora da primeira conta é: " + primeiraConta.getSaldo());
 
        if(primeiraConta == segundaConta){
         System.out.println("São a mesma conta");

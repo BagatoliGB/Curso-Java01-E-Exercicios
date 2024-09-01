@@ -3,11 +3,12 @@ package JavaBank.contas;
 //saldo. agencia, numero e titular.
 public class Conta {
 
+        //Getters and Setters, para encapsulamento de objetos
         private double saldo;
-        int agencia;
-        int numero;
+        private int agencia;
+        private int numero;
         //abaixo ele irá pegar de uma outra classe criada as variaveis definido dentro da classe Cliente
-        public Cliente titular;
+        private Cliente titular;
      
 
         public void deposita(double valor){
@@ -42,4 +43,22 @@ public class Conta {
         public double getSaldo(){
                 return this.saldo;
         }
+
+        public double getNumero(){
+                return this.numero;
+        }
+
+        public void setNumero (int novoNumero){
+                this.numero = novoNumero;
+                if (novoNumero > 0){
+
+                } else {
+                        System.out.println("O numero da Conta não pode ser igual ou menor que zero");
+                }
+        }
+
+        public void setAgencia(int agencia) {
+            this.agencia = agencia;
+        }
+
 }
